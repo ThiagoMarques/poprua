@@ -1,0 +1,39 @@
+<div class="container container-psr">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="row justify-content-center">
+        <span class="page-psr pt-1 pb-1">Página <span id="page-now"></span></span>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-lg-12 card text-center video-card">
+          <p class="mt-2"><b>Catarina aguarda atendimento em frente à sala de “acolhimento”​</b></p>
+          <video class="mt-3" id="custom_video_play1" poster="img/logo.png" controls="controls">
+            <source src="recursos/videos/RAN_01_M2T1_720p.mp4" type="video/mp4">
+            Seu browser não suporta vídeos em HTML5.
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="stepBack" onclick="stepNavigation('c' + stepBackNumber);">
+    <i class="fas fa-chevron-left mb-4"></i>
+    <span class="stepText">voltar</span>
+  </div>
+  <div class="stepForward" onclick="stepNavigation('c' + stepForwardNumber);">
+    <i class="fas fa-chevron-right mb-4"></i>
+    <span class="stepText">avançar</span>
+  </div>
+</div>
+<script>
+  var video = document.querySelector('#custom_video_play1');
+  video.addEventListener("playing", function () {
+    $('.stepBack').addClass('btn-play-video');
+    $('.stepForward').addClass('btn-play-video');
+  }); 
+  video.addEventListener("pause", function () {
+    $('.stepBack').removeClass('btn-play-video');
+    $('.stepForward').removeClass('btn-play-video');
+}); 
+</script>
+
+

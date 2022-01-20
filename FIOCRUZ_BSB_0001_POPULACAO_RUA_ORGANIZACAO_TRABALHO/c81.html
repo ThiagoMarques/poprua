@@ -1,0 +1,381 @@
+<div class="container container-psr">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="row justify-content-center">
+        <span class="page-psr pt-1 pb-1">Página <span id="page-now"></span></span>
+      </div>
+      <div class="row card">
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="col-sm-12 card box-text">
+              <div id="informativo" class="row informativo-col">
+                <div class="col-sm-6">
+                  <div class="row">
+                    <div class="informativo-texto pb-0">
+                      <h1 class="informativo-bold">Vamos consolidar o que estudamos?</h1>
+                      <p>A seguir vamos fazer <span class="highlight">exercícios</span> sobre os assuntos relacionadas aos conteúdos estudados.</p>
+                      <p>Orientações para responder os <span class="highlight">exercícios</span>:</p>
+                      <ul>
+                        <li><span class="number">1.</span><span class="highlight">Clique</span> na opção correta. Aparecerá o feedback dessa questão.</li>
+                        <li><span class="number">2.</span>Se a <b>resposta estiver incorreta</b>, é possível fechar o feedback e tentar novamente.</li>
+                        <li><span class="number">3.</span>Não há limites de tentativas</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="row text-center btn-text">
+                    <button class="btn btn-lg btnStart" onclick="show('questoes')">Iniciar</button>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <img src="img/exercicios.png" class="img-fluid d-none d-sm-block" alt="imagem de um livro" srcset="">
+                </div>
+              </div>
+              <div id="questoes" class="row row-exercise">
+                <div class="col-sm-12">
+                  <h3 id="enunciate">Enunciado</h3>
+                  <h3 id="question">Pergunta</h3>
+                  <div id="optA" class="choice-container">
+                    <p class="choice-prefix">(a)</p>
+                    <p class="choice-text" data-number="1">Pergunta 1</p>
+                  </div>
+                  <div id="feedbackA" class="div-feedback">
+                    <div class="row justify-content-between">
+                      <p class="feedback-titulo">FeedbackTitulo</p>
+                      <i onclick="closeFeedback()" class="fa fa-times btn-feedback" aria-hidden="true"></i>
+                    </div>
+                    <div class="row">
+                      <p class="feedback-text">FeedbackTexto</p>
+                    </div>
+                  </div>
+                  <div id="optB" class="choice-container">
+                    <p class="choice-prefix">(b)</p>
+                    <p class="choice-text" data-number="2">Pergunta 2</p>
+                  </div>
+                  <div id="feedbackB" class="div-feedback">
+                    <div class="row justify-content-between">
+                      <p class="feedback-titulo">FeedbackTitulo</p>
+                      <i onclick="closeFeedback()" class="fa fa-times btn-feedback" aria-hidden="true"></i>
+                    </div>
+                    <div class="row">
+                      <p class="feedback-text">FeedbackTexto</p>
+                    </div>
+                  </div>
+                  <div id="optC" class="choice-container">
+                    <p class="choice-prefix">(c)</p>
+                    <p class="choice-text" data-number="3">Pergunta 3</p>
+                  </div>
+                  <div id="feedbackC" class="div-feedback">
+                    <div class="row justify-content-between">
+                      <p class="feedback-titulo">FeedbackTitulo</p>
+                      <i onclick="closeFeedback()" class="fa fa-times btn-feedback" aria-hidden="true"></i>
+                    </div>
+                    <div class="row">
+                      <p class="feedback-text">FeedbackTexto</p>
+                    </div>
+                  </div>
+                  <div id="optD" class="choice-container">
+                    <p class="choice-prefix">(d)</p>
+                    <p class="choice-text" data-number="4">Pergunta 4</p>
+                  </div>
+                  <div id="feedbackD" class="div-feedback">
+                    <div class="row justify-content-between">
+                      <p class="feedback-titulo">FeedbackTitulo</p>
+                      <i onclick="closeFeedback()" class="fa fa-times btn-feedback" aria-hidden="true"></i>
+                    </div>
+                    <div class="row">
+                      <p class="feedback-text">FeedbackTexto</p>
+                    </div>
+                  </div>
+                  <div id="optE" class="choice-container">
+                    <p class="choice-prefix">(e)</p>
+                    <p class="choice-text" data-number="5">Pergunta 5</p>
+                  </div>
+                  <div id="feedbackE" class="div-feedback">
+                    <div class="row justify-content-between">
+                      <p class="feedback-titulo">FeedbackTitulo</p>
+                      <i onclick="closeFeedback()" class="fa fa-times btn-feedback" aria-hidden="true"></i>
+                    </div>
+                    <div class="row">
+                      <p class="feedback-text">FeedbackTexto</p>
+                    </div>
+                  </div>
+                </div>
+                <input id="btnResposta" type="button" value="finalizar" onclick="changeWindow();">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+  <div class="stepBack" onclick="stepNavigation('c' + stepBackNumber);">
+    <i class="fas fa-chevron-left mb-4"></i>
+    <span class="stepText">voltar</span>
+  </div>
+  <div class="stepForward" onclick="stepNavigation('c' + stepForwardNumber);">
+    <i class="fas fa-chevron-right mb-4"></i>
+    <span class="stepText">avançar</span>
+  </div>
+  <div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="tituloModal"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="tituloModal"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id="texto-modal" class="modal-body">
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+  
+<script>
+  var enunciate = document.querySelector('#enunciate')
+  var question = document.querySelector('#question')
+  var choices = Array.from(document.querySelectorAll('.choice-text'))
+  var progressText = document.querySelector('#progressText')
+  var progressBarFull = document.querySelector('#progressBarFull')
+
+  var currentQuestion = {}
+  var acceptingAnswers = true
+  var score = 0
+  var questionCounter = 0
+  var availableQuestions = []
+
+  var questions = [
+    {
+      type: 'ME',
+      enunciate: 'Marque uma das opções abaixo:',
+      question: 'Sobre aplicar os instrumentos e as estratégias de trabalho com vistas à ampliação do acesso e da atenção à PSR. Assinale a alternativa INCORRETA:',
+      choice1: 'Um melhor aproveitamento da agenda requer a definição de competências e planejamento adequado de papéis para as situações por cada membro da equipe.',
+      choice2: 'Se o usuário vai à UBS para consultar por uma questão aguda, mas tem uma condição crônica, pode-se aproveitar a ocasião para realizar as ações previstas na consulta de revisão. Assim, numa única consulta, é possível tratar de uma infecção respiratória e da diabetes do usuário, por exemplo.',
+      choice3: 'Pré-agendamentos prolongados podem gerar desperdício de tempo para o profissional.',
+      choice4: 'O acesso avançado diz respeito a adotar uma agenda que tenha espaços disponíveis para demandas que serão atendidas no mesmo mês.',
+      choice5: 'É importante que os intervalos sejam baseados em indicações clínicas, e não em intervalos padrão por diagnóstico.',
+      answer: 4,
+      feedback1: 'É preciso perguntar se é o profissional mais adequado para oferecer o atendimento naquele momento ou se outra pessoa poderia resolver da mesma forma, evitando a sobrecarga de profissionais mais demandados normalmente, como os médicos, a fim de agilizar e otimizar o acesso dos usuários e evitar remarcações. Em geral, os usuários buscam a UBS para solicitar atendimento médico. Uma escuta qualificada, no entanto, pode identificar que nem todos necessitam consultar com o médico. Por trás desse pedido, podem estar diversas demandas, como retirar uma sutura, fazer uma consulta de pré-natal, renovar uma receita de medicamento, fazer uma medicação injetável, consultar porque não está se sentindo bem ou outras tantas para as quais não necessariamente a consulta médica seja a melhor resposta.',
+      feedback2: 'Uma estratégia utilizada para reduzir a demanda preexistente é aproveitar ao máximo cada encontro com o usuário, perguntando durante o atendimento sobre outras demandas existentes, a fim de evitar a geração de uma consulta futura. Durante o processo de implantação do acesso avançado, essa estratégia pode ser especialmente útil, eliminando da agenda as consultas de rotina previstas para as próximas semanas ou meses.',
+      feedback3: 'Pré-agendamentos aumentam as chances de absenteísmo, e pode ser que o usuário venha à unidade por outras demandas antes de chegar o dia agendado.',
+      feedback4: 'O acesso avançado significa adotar uma agenda que tenha a maioria dos espaços disponíveis para demandas que serão atendidas no mesmo dia.',
+      feedback5: 'Outra estratégia para ganhar mais capacidade da agenda é rever a frequência com que são agendados os retornos dos pacientes. Ou seja, o tempo estimado para retorno pode variar de acordo com o quadro de cada usuário, sendo que os de menor risco podem ser marcados com intervalos maiores que os de maior risco, mesmo que tenham uma mesma condição crônica.',
+    }
+  ]
+
+  var SCORE_POINTS = 1
+  var MAX_QUESTIONS = 1
+  var moduleExercise = 'EX4'
+  var numberPage = 81
+
+  startQuestions = () => {
+    questionCounter = 0
+    score = 0
+    availableQuestions = [...questions]
+    getNewQuestion()
+    $('#btnResposta').hide()
+    $('#informativo').removeClass('informativo-col')
+  }
+  getNewQuestion = () => {
+    if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+      feedbackUser()
+      show('resultado')
+
+    } else {
+      questionCounter++
+      clearAtributes()
+      var questionsIndex = Math.floor(Math.random() * availableQuestions.length)
+      currentQuestion = availableQuestions[questionsIndex]
+
+      if (currentQuestion.type === 'ME') {
+        enunciate.innerText = currentQuestion.enunciate
+        question.innerText = currentQuestion.question
+
+        choices.forEach(choice => {
+          var number = choice.dataset['number']
+          choice.innerText = currentQuestion['choice' + number]
+        })
+      }
+      if (currentQuestion.type === 'VF') {
+        enunciate.innerText = currentQuestion.enunciate
+        question.innerText = currentQuestion.question
+
+        choices.forEach(choice => {
+          var number = choice.dataset['number']
+          choice.innerText = currentQuestion['choice' + number]
+
+          $("#optC").hide()
+          $("#optD").hide()
+          $("#optE").hide()
+        })
+      }
+      availableQuestions.splice(questionsIndex, 1)
+      acceptingAnswers = true
+    }
+  }
+
+  clearAtributes = () => {
+    $("#optC").show()
+    $("#optD").show()
+    $("#optE").show()
+
+    $("#btnResposta").prop("disabled", true)
+
+    $('.div-feedback').removeClass('correta')
+    $('.div-feedback').removeClass('incorreta')
+
+    choices.forEach(choice => {
+      choice.parentElement.classList.remove('correct')
+      choice.parentElement.classList.remove('incorrect')
+    })
+
+    var all = $(".choiced-container").map(function () {
+      this.classList.remove('choiced-container')
+      this.classList.add('choice-container')
+    })
+  }
+
+  clearQuestion = () => {
+    acceptingAnswers = true
+  }
+
+  choices.forEach(choice => {
+    choice.addEventListener('click', e => {
+      if (!acceptingAnswers) return
+
+      acceptingAnswers = false
+      var selectedChoice = e.target
+      var selectedAnswer = selectedChoice.dataset['number']
+      var numQuestion = parseInt(selectedAnswer)
+      var elementFeedback = ''
+
+      switch (numQuestion) {
+        case 1:
+          $('.feedback-text').html(currentQuestion.feedback1)
+          $('#feedbackA').show()
+          break
+        case 2:
+          $('.feedback-text').html(currentQuestion.feedback2)
+          $('#feedbackB').show()
+          break
+        case 3:
+          $('.feedback-text').html(currentQuestion.feedback3)
+          $('#feedbackC').show()
+          break
+        case 4:
+          $('.feedback-text').html(currentQuestion.feedback4)
+          $('#feedbackD').show()
+          break
+        case 5:
+          $('.feedback-text').html(currentQuestion.feedback5)
+          $('#feedbackE').show()
+          break
+      }
+      var questao = document.getElementById(elementFeedback)
+      $("#btnResposta").prop("disabled", false)
+
+      var classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
+
+      if (classToApply === 'correct') {
+        incrementScore(SCORE_POINTS)
+        $(".div-feedback").addClass('correta')
+        $('.feedback-titulo').html('Resposta correta')
+        $('.feedback-titulo').css('color', '#009900')
+        $('#btnResposta').show()
+        $('.btn-feedback').hide()
+        $('#btn-nav').prop('disabled', false)
+        
+      } else {
+        $(".div-feedback").addClass('incorreta')
+        $('.feedback-titulo').html('Resposta incorreta')
+        $('.feedback-titulo').css('color', '#e60000')
+      }
+
+      selectedChoice.parentElement.classList.add(classToApply)
+
+      var all = $(".choice-container").map(function () {
+        this.classList.remove('choice-container')
+        this.classList.add('choiced-container')
+      })
+      if (questionCounter > MAX_QUESTIONS - 1)
+        $("#btnResposta").prop('value', 'Finalizar')
+    })
+  })
+
+  incrementScore = num => {
+    score += num
+    updateExer(moduleExercise, numberPage)
+  }
+
+  function show(elementID) {
+    switch (elementID) {
+      case 'informativo':
+        $("#questoes").hide()
+        break
+
+      case 'questoes':
+        $("#informativo").hide()
+        startQuestions()
+        break;
+
+      case 'resultado':
+        $("#informativo").hide()
+        $("#questoes").hide()
+        break;
+    }
+
+    var questao = document.getElementById(elementID)
+    if (!questao) {
+      return;
+    }
+
+    var pages = document.getElementsByClassName('questao')
+    for (var i = 0; i < pages.length; i++) {
+      pages[i].style.display = 'none';
+    }
+    questao.style.display = 'block';
+  }
+  function changeWindow() {
+    stepNavigation(('c' + stepForwardNumber))
+  }
+
+  function closeFeedback() {
+    $("#optC").show()
+    $("#optD").show()
+    $("#optE").show()
+
+    $("#btnResposta").prop("disabled", true)
+
+    $('.div-feedback').removeClass('correta')
+    $('.div-feedback').removeClass('incorreta')
+
+    $("#feedbackA").hide()
+    $("#feedbackB").hide()
+    $("#feedbackC").hide()
+    $("#feedbackD").hide()
+    $("#feedbackE").hide()
+
+    acceptingAnswers = true
+
+
+    choices.forEach(choice => {
+      choice.parentElement.classList.remove('correct')
+      choice.parentElement.classList.remove('incorrect')
+    })
+
+    var all = $(".choiced-container").map(function () {
+      this.classList.remove('choiced-container')
+      this.classList.add('choice-container')
+    })
+  }
+
+  $(document).ready(function () {
+    clearAtributes();
+    show('informativo');
+    $('#bar-index').hide();
+    $('#btn-nav').prop('disabled', true);
+  });
+
+</script>

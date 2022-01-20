@@ -1,0 +1,379 @@
+<div class="container container-psr">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="row justify-content-center">
+        <span class="page-psr pt-1 pb-1">Página <span id="page-now"></span></span>
+        <!-- <span class="page-psr pt-1 pb-1">Tópico 5 - Exercícios</span> -->
+      </div>
+      <div class="row card">
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="col-sm-12 card box-text">
+              <div id="informativo" class="row informativo-col">
+                <div class="col-sm-6">
+                  <div class="row">
+                    <div class="informativo-texto pb-0">
+                      <h1 class="informativo-bold">Vamos consolidar o que estudamos?</h1>
+                      <p>A seguir vamos fazer <span class="highlight">exercícios</span> sobre os assuntos relacionadas aos conteúdos estudados.</p>
+                      <p>Orientações para responder os <span class="highlight">exercícios</span>:</p>
+                      <ul>
+                        <li><span class="number">1.</span><span class="highlight">Clique</span> na opção correta. Aparecerá o feedback dessa questão.</li>
+                        <li><span class="number">2.</span>Se a <b>resposta estiver incorreta</b>, é possível fechar o feedback e tentar novamente.</li>
+                        <li><span class="number">3.</span>Não há limites de tentativas</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="row text-center btn-text">
+                    <button class="btn btn-lg btnStart" onclick="show('questoes')">Iniciar</button>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <img src="img/exercicios.png" class="img-fluid d-none d-sm-block" alt="imagem de um livro" srcset="">
+                </div>
+              </div>
+              <div id="questoes" class="row row-exercise">
+                <div class="col-sm-12">
+                  <h3 id="enunciate">Enunciado</h3>
+                  <h3 id="question">Pergunta</h3>
+                  <div id="optA" class="choice-container">
+                    <p class="choice-prefix">(a)</p>
+                    <p class="choice-text" data-number="1">Pergunta 1</p>
+                  </div>
+                  <div id="feedbackA" class="div-feedback">
+                    <div class="row justify-content-between">
+                      <p class="feedback-titulo">FeedbackTitulo</p>
+                      <i onclick="closeFeedback()" class="fa fa-times btn-feedback" aria-hidden="true"></i>
+                    </div>
+                    <div class="row">
+                      <p class="feedback-text">FeedbackTexto</p>
+                    </div>
+                  </div>
+                  <div id="optB" class="choice-container">
+                    <p class="choice-prefix">(b)</p>
+                    <p class="choice-text" data-number="2">Pergunta 2</p>
+                  </div>
+                  <div id="feedbackB" class="div-feedback">
+                    <div class="row justify-content-between">
+                      <p class="feedback-titulo">FeedbackTitulo</p>
+                      <i onclick="closeFeedback()" class="fa fa-times btn-feedback" aria-hidden="true"></i>
+                    </div>
+                    <div class="row">
+                      <p class="feedback-text">FeedbackTexto</p>
+                    </div>
+                  </div>
+                  <div id="optC" class="choice-container">
+                    <p class="choice-prefix">(c)</p>
+                    <p class="choice-text" data-number="3">Pergunta 3</p>
+                  </div>
+                  <div id="feedbackC" class="div-feedback">
+                    <div class="row justify-content-between">
+                      <p class="feedback-titulo">FeedbackTitulo</p>
+                      <i onclick="closeFeedback()" class="fa fa-times btn-feedback" aria-hidden="true"></i>
+                    </div>
+                    <div class="row">
+                      <p class="feedback-text">FeedbackTexto</p>
+                    </div>
+                  </div>
+                  <div id="optD" class="choice-container">
+                    <p class="choice-prefix">(d)</p>
+                    <p class="choice-text" data-number="4">Pergunta 4</p>
+                  </div>
+                  <div id="feedbackD" class="div-feedback">
+                    <div class="row justify-content-between">
+                      <p class="feedback-titulo">FeedbackTitulo</p>
+                      <i onclick="closeFeedback()" class="fa fa-times btn-feedback" aria-hidden="true"></i>
+                    </div>
+                    <div class="row">
+                      <p class="feedback-text">FeedbackTexto</p>
+                    </div>
+                  </div>
+                  <!--<div id="optE" class="choice-container">
+                    <p class="choice-prefix">(e)</p>
+                    <p class="choice-text" data-number="5">Pergunta 5</p>
+                  </div>
+                  <div id="feedbackE" class="div-feedback">
+                    <div class="row justify-content-between">
+                      <p class="feedback-titulo">FeedbackTitulo</p>
+                      <i onclick="closeFeedback()" class="fa fa-times btn-feedback" aria-hidden="true"></i>
+                    </div>
+                    <div class="row">
+                      <p class="feedback-text">FeedbackTexto</p>
+                    </div>
+                  </div>-->
+                </div>
+                <input id="btnResposta" type="button" value="finalizar" onclick="changeWindow();">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+  <div class="stepBack" onclick="stepNavigation('c' + stepBackNumber);">
+    <i class="fas fa-chevron-left mb-4"></i>
+    <span class="stepText">voltar</span>
+  </div>
+  <div class="stepForward" onclick="stepNavigation('c' + stepForwardNumber);">
+    <i class="fas fa-chevron-right mb-4"></i>
+    <span class="stepText">avançar</span>
+  </div>
+  <div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="tituloModal"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="tituloModal"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id="texto-modal" class="modal-body">
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+  
+<script>
+  var enunciate = document.querySelector('#enunciate')
+  var question = document.querySelector('#question')
+  var choices = Array.from(document.querySelectorAll('.choice-text'))
+  var progressText = document.querySelector('#progressText')
+  var progressBarFull = document.querySelector('#progressBarFull')
+
+  var currentQuestion = {}
+  var acceptingAnswers = true
+  var score = 0
+  var questionCounter = 0
+  var availableQuestions = []
+
+  var questions = [
+    {
+      type: 'ME',
+      enunciate: 'Marque uma das opções abaixo:',
+      question: 'Sobre a lógica do matriciamento, assinale a alternativa correta:​',
+      choice1: 'O matriciamento tem como principal objetivo repassar o caso. O encontro entre as equipes serve para que possa ser explicado com detalhes o que foi feito e como está o usuário neste atual momento.  Serve tanto da equipe especializada para a básica como da básica para a especializada.',
+      choice2: 'Operar na lógica do matriciamento é compartilhar responsabilidades e cuidado do usuário com os diversos atores que compõem a rede de proteção desse usuário. Podem ser atores governamentais, não governamentais, como ONGs, e até mesmo entidades privadas que possibilitem algum cuidado voluntário a essa pessoa em situação de rua.',
+      choice3: 'Existe um escalonamento para o matriciamento. Não se pode fazer matriciamento sem antes recorrer a uma telessaúde.',
+      choice4: 'Em relação às visitas conjuntas, elas não devem ser utilizadas para pessoas em situação de rua, pois estas nunca estão no mesmo lugar, e, assim, não teriam utilidade prática para o andamento do caso.',
+      answer: 2,
+      feedback1: 'Inclusive é um comportamento muito comum, que ocorre nos matriciamentos. Mas o matriciamento serve para as equipes discutirem o caso, ampliarem a visão sobre os problemas encontrados na condução dele e compartilharem responsabilidades e cuidado com usuário. ',
+      feedback2: 'O matriciamento pode ser realizado com toda a rede de proteção do usuário que tenha alguma contribuição na melhor condução do caso.',
+      feedback3: 'O recurso telessaúde pode e deve ser utilizado pelos profissionais de saúde da UBS para auxiliar no diagnóstico e na condução dos casos. Mas não existe a obrigatoriedade de anteceder ao matriciamento.​',
+      feedback4: 'Reconhecer o local que a pessoa em situação de rua está, quais as condições sanitárias, local de dormir e alimentar-se, pode dizer muito sobre a organização dessa pessoa e auxiliar na nossa avaliação sobre como iremos propor o tratamento.',
+    }
+  ]
+
+  var SCORE_POINTS = 1
+  var MAX_QUESTIONS = 1
+  var moduleExercise = 'EX5'
+  var numberPage = 67
+
+  startQuestions = () => {
+    questionCounter = 0
+    score = 0
+    availableQuestions = [...questions]
+    getNewQuestion()
+    $('#btnResposta').hide()
+    $('#informativo').removeClass('informativo-col')
+  }
+  getNewQuestion = () => {
+    if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+      feedbackUser()
+      show('resultado')
+
+    } else {
+      questionCounter++
+      clearAtributes()
+      var questionsIndex = Math.floor(Math.random() * availableQuestions.length)
+      currentQuestion = availableQuestions[questionsIndex]
+
+      if (currentQuestion.type === 'ME') {
+        enunciate.innerText = currentQuestion.enunciate
+        question.innerText = currentQuestion.question
+
+        choices.forEach(choice => {
+          var number = choice.dataset['number']
+          choice.innerText = currentQuestion['choice' + number]
+        })
+      }
+      if (currentQuestion.type === 'VF') {
+        enunciate.innerText = currentQuestion.enunciate
+        question.innerText = currentQuestion.question
+
+        choices.forEach(choice => {
+          var number = choice.dataset['number']
+          choice.innerText = currentQuestion['choice' + number]
+          $("#optC").hide()
+          $("#optD").hide()
+          $("#optE").hide()
+        })
+      }
+      availableQuestions.splice(questionsIndex, 1)
+      acceptingAnswers = true
+    }
+  }
+
+  clearAtributes = () => {
+    $("#optC").show()
+    $("#optD").show()
+    $("#optE").show()
+
+    $("#btnResposta").prop("disabled", true)
+
+    $('.div-feedback').removeClass('correta')
+    $('.div-feedback').removeClass('incorreta')
+
+    choices.forEach(choice => {
+      choice.parentElement.classList.remove('correct')
+      choice.parentElement.classList.remove('incorrect')
+    })
+
+    var all = $(".choiced-container").map(function () {
+      this.classList.remove('choiced-container')
+      this.classList.add('choice-container')
+    })
+  }
+
+  clearQuestion = () => {
+    acceptingAnswers = true
+  }
+
+  choices.forEach(choice => {
+    choice.addEventListener('click', e => {
+      if (!acceptingAnswers) return
+
+      acceptingAnswers = false
+      var selectedChoice = e.target
+      var selectedAnswer = selectedChoice.dataset['number']
+      var numQuestion = parseInt(selectedAnswer)
+      var elementFeedback = ''
+
+      switch (numQuestion) {
+        case 1:
+          $('.feedback-text').html(currentQuestion.feedback1)
+          $('#feedbackA').show()
+          break
+        case 2:
+          $('.feedback-text').html(currentQuestion.feedback2)
+          $('#feedbackB').show()
+          break
+        case 3:
+          $('.feedback-text').html(currentQuestion.feedback3)
+          $('#feedbackC').show()
+          break
+        case 4:
+          $('.feedback-text').html(currentQuestion.feedback4)
+          $('#feedbackD').show()
+          break
+        case 5:
+          $('.feedback-text').html(currentQuestion.feedback5)
+          $('#feedbackE').show()
+          break
+      }
+      var questao = document.getElementById(elementFeedback)
+      $("#btnResposta").prop("disabled", false)
+
+      var classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
+
+      if (classToApply === 'correct') {
+        incrementScore(SCORE_POINTS)
+        $(".div-feedback").addClass('correta')
+        $('.feedback-titulo').html('Resposta correta')
+        $('.feedback-titulo').css('color', '#009900')
+        $('#btnResposta').show()
+        $('.btn-feedback').hide()
+        $('#btn-nav').prop('disabled', false)
+        
+      } else {
+        $(".div-feedback").addClass('incorreta')
+        $('.feedback-titulo').html('Resposta incorreta')
+        $('.feedback-titulo').css('color', '#e60000')
+      }
+
+      selectedChoice.parentElement.classList.add(classToApply)
+
+      var all = $(".choice-container").map(function () {
+        this.classList.remove('choice-container')
+        this.classList.add('choiced-container')
+      })
+      if (questionCounter > MAX_QUESTIONS - 1)
+        $("#btnResposta").prop('value', 'Finalizar')
+    })
+  })
+
+  incrementScore = num => {
+    score += num
+    updateExer(moduleExercise, numberPage)
+  }
+
+  function show(elementID) {
+    switch (elementID) {
+      case 'informativo':
+        $("#questoes").hide()
+        break
+
+      case 'questoes':
+        $("#informativo").hide()
+        startQuestions()
+        break;
+
+      case 'resultado':
+        $("#informativo").hide()
+        $("#questoes").hide()
+        break;
+    }
+
+    var questao = document.getElementById(elementID)
+    if (!questao) {
+      return;
+    }
+
+    var pages = document.getElementsByClassName('questao')
+    for (var i = 0; i < pages.length; i++) {
+      pages[i].style.display = 'none';
+    }
+    questao.style.display = 'block';
+  }
+  function changeWindow() {
+    stepNavigation(('c' + stepForwardNumber))
+  }
+
+  function closeFeedback() {
+    $("#optC").show()
+    $("#optD").show()
+    $("#optE").show()
+
+    $("#btnResposta").prop("disabled", true)
+
+    $('.div-feedback').removeClass('correta')
+    $('.div-feedback').removeClass('incorreta')
+
+    $("#feedbackA").hide()
+    $("#feedbackB").hide()
+    $("#feedbackC").hide()
+    $("#feedbackD").hide()
+    $("#feedbackE").hide()
+
+    acceptingAnswers = true
+
+
+    choices.forEach(choice => {
+      choice.parentElement.classList.remove('correct')
+      choice.parentElement.classList.remove('incorrect')
+    })
+
+    var all = $(".choiced-container").map(function () {
+      this.classList.remove('choiced-container')
+      this.classList.add('choice-container')
+    })
+  }
+
+  $(document).ready(function () {
+    clearAtributes();
+    show('informativo');
+    $('#bar-index').hide();
+    $('#btn-nav').prop('disabled', true);
+  });
+
+</script>

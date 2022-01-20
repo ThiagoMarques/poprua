@@ -1,0 +1,84 @@
+<div class="container container-psr">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="row justify-content-center">
+        <span class="page-psr pt-1 pb-1">Página <span id="page-now"></span></span>
+      </div>
+      <div class="row card">
+        <div class="col-sm-12 pt-2 card align-self-start">
+          <div class="row">
+              <div class="col-sm-12 mt-3">
+                <div class="box-text">
+                  <div class="accordion" id="accordionFicha">
+                    <!--1-->
+                    <div class="card-accordion">
+                      <div class="card-header-accordion" id="FichaVisita">
+                        <h2 class="mb-0"><button type="button" class="btn btn-block btn-accordion" aria-expanded="true" data-toggle="collapse" data-target="#CollapseFichaVisita">Ficha de Visita Domiciliar e Territorial </button></h2>
+                      </div>
+                      <div id="CollapseFichaVisita" class="collapse show" aria-expanded="true" aria-labelledby="FichaVisita" data-parent="#accordionFicha">
+                        <div class="card-body">
+                          <p>A ficha de “visita domiciliar e territorial” é específica para registrar as atividades de visita ao cidadão ou a outros pontos do território da eSF.</p>
+                          <p>Tem o objetivo de acompanhamento das pessoas e famílias.</p>
+                          <p>A Ficha de Visita Domiciliar e Territorial é de <b>uso exclusivo do ACS, Agente de ação social e ACE.</b> </p>
+                          <p>A Ficha de Visita Domiciliar e Territorial é preenchida preferencialmente no momento da visita. </p>
+                          <p>Além disso, este bloco possui campo para preenchimento do CNC, data de nascimento, sexo e se a visita foi compartilhada com outro profissional. Os demais blocos são preenchidos com o motivo da visita domiciliar, antropometria e desfecho.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!--2-->
+                    <div class="card-accordion">
+                      <div class="card-header-accordion" id="FichaAtendimento">
+                        <h2 class="mb-0"><button type="button" class="btn btn-block btn-accordion" data-toggle="collapse" data-target="#CollapseFichaAtendimento">Ficha de Atendimento Individual  </button></h2>
+                      </div>
+                      <div id="CollapseFichaAtendimento" class="collapse" aria-labelledby="FichaAtendimento" data-parent="#accordionFicha">
+                        <div class="card-body">
+                          <p>Para os demais profissionais, a visita domiciliar é definida como <b>atendimento realizado no domicílio</b>, e deve ser registrada na <b>Ficha de Atendimento Individual</b>, a próxima ficha a ser apresentada. </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!--3-->
+                    <div class="card-accordion">
+                      <div class="card-header-accordion" id="FichaIdentificacao">
+                        <h2 class="mb-0"><button type="button" class="btn btn-block btn-accordion" data-toggle="collapse" data-target="#CollapseFichaIdentificacao">Identificação do usuário e visita compartilhada  </button></h2>
+                      </div>
+                      <div id="CollapseFichaIdentificacao" class="collapse" aria-labelledby="FichaIdentificacao" data-parent="#accordionFicha">
+                        <div class="card-body">
+                          <p>Neste bloco preenche-se com o número da visita,  Turno (manhã, tarde ou noite), micro área e o Tipo de imóvel (Cada item possui um número correspondente a si): </p>
+                          <ul>
+                            <li>(1) Domicílio;</li>
+                            <li>(2) Comércio;</li>
+                            <li>(3) <b>Terreno baldio;</b></li>
+                            <li>(4) <b>Ponto Estratégico (PE: cemitério, borracharia, ferro-velho, depósito de sucata ou materiais de construção, garagem de ônibus ou veículo de grande porte);</b></li>
+                            <li>(5) Escola;</li>
+                            <li>(6) Creche;</li>
+                            <li>(7) <b>Abrigo;</b></li>
+                            <li>(8) <b>Instituição de longa permanência para idosos;</b></li>
+                            <li>(9) Unidade prisional;</li>
+                            <li>(10) Unidade de medida socioeducativa; </li>
+                            <li>(11) Delegacia;</li>
+                            <li>(12) Estabelecimento religioso;</li>
+                            <li>(99) Outros</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="row box-text">
+            <span class="small align-center"><i class="fas fa-mouse-pointer pr-2"></i>Clique para abrir o item</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="stepBack" onclick="stepNavigation('c' + stepBackNumber);">
+    <i class="fas fa-chevron-left mb-4"></i>
+    <span class="stepText">voltar</span>
+  </div>
+  <div class="stepForward" onclick="stepNavigation('c' + stepForwardNumber);">
+    <i class="fas fa-chevron-right mb-4"></i>
+    <span class="stepText">avançar</span>
+  </div>
+</div>

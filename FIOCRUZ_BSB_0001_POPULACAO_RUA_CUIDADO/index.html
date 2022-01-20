@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>População em situação de rua</title>
+
+  <!-- Fontawesome -->
+  <link href="vendor/fontawesome/css/all.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/normalize.css" rel="stylesheet">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap/css/custom.css" rel="stylesheet">
+  <script src="vendor/bootstrap/jquery/jquery-3.5.1.min.js"></script>
+  <!-- PPU  -->
+  <script src="se_unasus_pack.js"></script>
+  <script src="vendor/lib/PPU.js"></script>
+
+</head>
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-times"></i></a>
+  <img class="image-sidemenu" src="img/logo-pop-vertical.svg" width="60%" alt="Ícone PSR">
+  <!-- <p class="text-center title-menu-main pt-3">Módulo 2</p>
+  <ul class="menu-topico">
+    <li><i class="fas fa-book-open"></i>Guia do aluno</li>
+  </ul> -->
+  <ul class="menu-topico pt-4">
+    <li style="padding-left: 30px;" id="c0"><i class="fas fa-user"></i>Personagens</li>
+  </ul>
+  
+  <!--<p class="text-center title-menu">Tema 1</p>-->
+  
+  <ul class="menu-topico">
+    <span id="menu-topico-1" class="collapse-span" data-toggle="collapse" href="#topico1" role="button" aria-expanded="false" aria-controls="topico1"><i
+      id="menu01" class="fas fa-angle-right"></i>Acolhimento e técnicas de escuta</span>
+    <div class="collapse" id="topico1">
+      <li class="submenu" id="c1" >Objetivos</li>
+      <li class="submenu" id="c4" >Escuta qualificada</li>
+      <li class="submenu" id="c9">Técnicas de escuta</li>
+      <li class="submenu" id="c10">Exercícios</li>
+      <li class="submenu" id="c11">Referências bibliográficas</li>
+    </div>
+    <span id="menu-topico-2" class="collapse-span" data-toggle="collapse" href="#topico2" role="button" aria-expanded="false" aria-controls="topico2"><i
+      id="menu02" class="fas fa-angle-right"></i>Acolhimento e vínculo como estratégias de cuidado</span>
+    <div class="collapse" id="topico2">
+      <li class="submenu" id="c12">Acolhimento</li>
+      <li class="submenu" id="c21">Animação acolhimento</li>
+      <li class="submenu" id="c23">Exercícios</li>
+      <li class="submenu" id="c24">Material complementar de aprendizagem</li>
+      <li class="submenu" id="c25">Referências bibliográficas</li>
+    </div>
+    <span id="menu-topico-3" class="collapse-span" data-toggle="collapse" href="#topico3" role="button" aria-expanded="false" aria-controls="topico3"><i
+      id="menu03" class="fas fa-angle-right"></i>Acolhimento como organizador da clínica e do serviço </span>
+    <div class="collapse" id="topico3">
+      <li class="submenu" id="c26">Acolhimento como instrumento</li>
+      <li class="submenu" id="c33">Tecnologias</li>
+      <li class="submenu" id="c39">Exercícios</li>
+      <li class="submenu" id="c40">Material complementar de aprendizagem</li>
+      <li class="submenu" id="c41">Referências bibliográficas</li>
+    </div>
+  </ul>
+  
+  <!--<p class="text-center title-menu">Tema 2</p>-->
+  
+  <ul class="menu-topico">
+    <span id="menu-topico-4" class="collapse-span" data-toggle="collapse" href="#topico4" role="button" aria-expanded="false" aria-controls="topico4"><i
+      id="menu04" class="fas fa-angle-right"></i>O que é o Matriciamento? </span>
+    <div class="collapse" id="topico4">
+      <li class="submenu" id="c42" >Objetivos</li>
+      <li class="submenu" id="c43">O que é o Matriciamento?</li>
+      <li class="submenu" id="c49">Exercícios</li>
+      <li class="submenu" id="c50">Material complementar de aprendizagem</li>
+      <li class="submenu" id="c51">Referências bibliográficas</li>
+    </div>
+  </ul>
+  
+  <!--<p class="text-center title-menu">Tema 3</p>-->
+  
+  <ul class="menu-topico">
+    <span id="menu-topico-5" class="collapse-span" data-toggle="collapse" href="#topico5" role="button" aria-expanded="false" aria-controls="topico5"><i
+      id="menu05" class="fas fa-angle-right"></i>Como se opera a lógica de trabalho baseada no Matriciamento ? </span>
+    <div class="collapse" id="topico5">
+      <li class="submenu" id="c52">Checklist da reunião de matriciamento</li>
+      <li class="submenu" id="c59">Instrumentos para reuniões de matriciamento</li>
+      <li class="submenu" id="c65">Telessaúde e consultorias</li>
+      <li class="submenu" id="c67">Exercícios</li>
+      <li class="submenu" id="c68">Material complementar de aprendizagem</li>
+      <li class="submenu" id="c69">Referências bibliográficas</li>
+    </div>
+    <span id="menu-topico-6" class="collapse-span" data-toggle="collapse" href="#topico6" role="button" aria-expanded="false" aria-controls="topico6"><i
+      id="menu06" class="fas fa-angle-right"></i>O que é um serviço de Baixa Exigência ? </span>
+    <div class="collapse" id="topico6">
+      <li class="submenu" id="c70" >Objetivos</li>
+      <li class="submenu" id="c73">Serviços de baixa exigência</li>
+      <li class="submenu" id="c79">Autonomia do usuário</li>
+      <li class="submenu" id="c80">Exercícios</li>
+      <li class="submenu" id="c81">Material complementar de aprendizagem</li>
+      <li class="submenu" id="c82">Referências bibliográficas</li>
+    </div>
+    <span id="menu-topico-7" class="collapse-span" data-toggle="collapse" href="#topico7" role="button" aria-expanded="false" aria-controls="topico7"><i
+      id="menu07" class="fas fa-angle-right"></i>Como construir pactuações e regras coletivas (Assembleias) </span>
+    <div class="collapse" id="topico7">
+      <li class="submenu" id="c83">Pactuações coletivas</li>
+      <li class="submenu" id="c90">Exercícios</li>
+      <li class="submenu" id="c91">Material complementar de aprendizagem</li>
+      <li class="submenu" id="c92">Referências bibliográficas</li>
+    </div>
+    <span id="menu-topico-8" class="collapse-span" data-toggle="collapse" href="#topico8" role="button" aria-expanded="false" aria-controls="topico8"><i
+      id="menu08" class="fas fa-angle-right"></i>Modos de flexibilizar as ofertas em saúde </span>
+    <div class="collapse" id="topico8">
+      <li class="submenu" id="c93">Flexibilização do atendimento</li>
+      <li class="submenu" id="c104">Exercícios</li>
+      <li class="submenu" id="c105">Referências bibliográficas</li>
+    </div>
+  </ul>
+  
+  <!-- <p class="text-center title-menu">Tema 4</p> -->
+  
+  <ul class="menu-topico">
+    <span id="menu-topico-9" class="collapse-span" data-toggle="collapse" href="#topico9" role="button" aria-expanded="false" aria-controls="topico9"><i
+      id="menu09" class="fas fa-angle-right"></i>Conceito de Redução de Danos </span>
+    <div class="collapse" id="topico9">
+      <li class="submenu" id="c106" >Objetivos</li>
+      <li class="submenu" id="c120">Nova Política Nacional sobre Drogas</li>
+      <li class="submenu" id="c116">Redução de danos</li>
+      <li class="submenu" id="c118">Construção de intervenções</li>
+      <li class="submenu" id="c122">Exercícios</li>
+      <li class="submenu" id="c123">Material complementar de aprendizagem</li>
+      <li class="submenu" id="c124">Referências bibliográficas</li>
+    </div>
+  </ul>
+  
+  <ul class="menu-topico pt-1">
+    <li style="padding-left: 30px;" id="c125"><i class="fas fa-clipboard-list"></i>Créditos</li>
+  </ul>
+</div>
+
+
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+    <span class="side_menu_btn m-2" onclick="openNav()">☰ </span>
+    <img class="img-fluid" src="img/icone-poprua.svg" width="65px" alt="Ímagem PSR" style="display: inline-block;">
+    <!-- <div class="ml-auto">
+      <span class="btn-header"><a href="#">Retornar</a></span>
+    </div> -->
+  </nav>
+  <nav class="head-breadcrumb container" aria-label="breadcrumb">
+    <div class="row align-items-center justify-content-center row-psr">
+      <div class="col-sm-10 col-md-10 home-breadcrumb">
+        <ol class="breadcrumb">
+          <li id="breadcrumb-init" class="breadcrumb-item"><a href="index.html"><b>Início</b> / O cuidado junto à população em situação de rua / <span class="current-breadcrumb"></span>
+          </a></li>
+          <li class="breadcrumb-item bread-active current-page" aria-current="page">Acolhimento e técnicas de escuta </li>
+        </ol>
+        <div class="row mobile-breadcrumb">
+          <p><a href="index.html">Início / </a>O cuidado junto à população em situação de rua / <span class="current-breadcrumb"></span></p>
+          <p class="current-page"></p>
+        </div>
+      </div>
+      <div class="col-sm-2 col-md-2 justify-content-center col-md-2 progress-psr">
+        <div class="progressbar-psr">
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+              aria-valuemax="100"></div>
+          </div>
+          <span class="progressbar-porcentage"><span id="status_percentage">0%</span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <page>
+
+  </page>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/lib/app.js"></script>
+  <script src="vendor/lib/menu.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- <script type="text/javascript">stepNavigation('c1');</script> -->
+  <script src="vendor/jquery/jquery-ui.min.js"></script>
+  <script src='vendor/zoom/jquery.zoom.js'></script>
+</body>
+
+</html>
+<script>
+  $('.collapse-span').click(function () {
+    changeIcon(this);
+  });
+  $(function () {
+    if (unasus.pack.initialize()) {
+      stepNavigation('c1');
+    }
+  });
+</script>

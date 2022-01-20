@@ -1,0 +1,72 @@
+<div class="container container-psr">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="row justify-content-center">
+        <span class="page-psr pt-1 pb-1">Página <span id="page-now"></span></span>
+      </div>
+      <div class="row card">
+        <div class="col-sm-12 pt-2 card align-self-start">
+          <div class="row">
+              <div class="col-sm-12 mt-3">
+                <div class="box-text">
+                  <p>Existe uma gama de possibilidades de ações e tipos de atendimento para preenchimento da ficha de atendimento individual. Algumas destas ações vale a pena destacarmos:</p>
+                  <div class="accordion" id="accordionFicha">
+                    <!--1-->
+                    <div class="card-accordion">
+                      <div class="card-header-accordion" id="ConsultaCompartilhada">
+                        <h2 class="mb-0"><button type="button" class="btn btn-block btn-accordion" aria-expanded="true" data-toggle="collapse" data-target="#CollapseConsultaCompartilhada">Consulta compartilhada (integração) </button></h2>
+                      </div>
+                      <div id="CollapseConsultaCompartilhada" class="collapse show" aria-expanded="true" aria-labelledby="ConsultaCompartilhada" data-parent="#accordionFicha">
+                        <div class="card-body">
+                          <p>Numa consulta compartilhada entre os profissionais da eSF (ou com profissionais de outras equipes: NASF AB, ESF), deve-se registrar na ficha de atendimento individual quem são os responsáveis envolvidos na consulta. No CDS há dois campos destinados aos CNES e CNS dos profissionais participantes na consulta.
+                            Quando for possível lançar os dados da consulta diretamente no PEC, na tela de finalização do atendimento, o nome do profissional que compartilhou o atendimento, na aba “atendimento compartilhado”.</p>
+                          <p><b>OBS: a ficha com registro de atendimento compartilhado, não deve ser utilizada para registrar outros atendimentos individuais realizado por apenas um dos profissionais.</b></p>
+                        </div>
+                      </div>
+                    </div>
+                    <!--2-->
+                    <div class="card-accordion">
+                      <div class="card-header-accordion" id="Acompanhamento">
+                        <h2 class="mb-0"><button type="button" class="btn btn-block btn-accordion" data-toggle="collapse" data-target="#CollapseAcompanhamento">Acompanhamento de questões de SM e problemas na relação com álcool e outras drogas (ofertas da eSF)</button></h2>
+                      </div>
+                      <div id="CollapseAcompanhamento" class="collapse" aria-labelledby="Acompanhamento" data-parent="#accordionFicha">
+                        <div class="card-body">
+                          <p>Existe a possibilidade do registro no campo “problemas/condição avaliada”, assim como na ficha de cadastro também pode ser registrado. </p>
+                          <p>Também é possível registrar o tipo de drogas e demais informações que sejam relevantes para a evolução do cuidado, no PEC. Embora não exista um campo específico para isso nas fichas, estas informações devem ser registradas pelo profissional médico no prontuário clínico, possibilitando melhor acompanhamento da evolução do caso.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!--3-->
+                    <div class="card-accordion">
+                      <div class="card-header-accordion" id="LocalAtendimento">
+                        <h2 class="mb-0"><button type="button" class="btn btn-block btn-accordion" data-toggle="collapse" data-target="#CollapseLocalAtendimento">Local de Atendimento (relação rua, UBS e Rede)</button></h2>
+                      </div>
+                      <div id="CollapseLocalAtendimento" class="collapse" aria-labelledby="LocalAtendimento" data-parent="#accordionFicha">
+                        <div class="card-body">
+                          <p>Este espaço é preenchido com o número referente ao local em que foi realizado o atendimento do usuário, considerando as opções abaixo:</p>
+                          <ul>
+                            <li>Registrar o local de atendimento numa consulta com usuários em situação de rua, assim como as demais informações das fichas, facilita, de forma geral, uma posterior análise dos dados para planejamento de ações e atividades desenvolvidas, contribui para comunicação entre os profissionais da equipe multiprofissional, além de refletir positivamente sobre a qualidade da assistência prestada.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="row box-text">
+            <span class="small align-center"><i class="fas fa-mouse-pointer pr-2"></i>Clique para abrir o item</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="stepBack" onclick="stepNavigation('c' + stepBackNumber);">
+    <i class="fas fa-chevron-left mb-4"></i>
+    <span class="stepText">voltar</span>
+  </div>
+  <div class="stepForward" onclick="stepNavigation('c' + stepForwardNumber);">
+    <i class="fas fa-chevron-right mb-4"></i>
+    <span class="stepText">avançar</span>
+  </div>
+</div>

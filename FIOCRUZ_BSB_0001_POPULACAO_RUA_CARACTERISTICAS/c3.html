@@ -1,0 +1,65 @@
+<div class="container container-psr">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="row justify-content-center">
+        <span class="page-psr pt-1 pb-1">Página <span id="page-now"></span></span>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-lg-9 card text-center video-card">
+          <video class="mt-3" id="custom_video_play1" poster="img/logo.png" controls="controls">
+            <source src="recursos/videos/RAN_01_M1T1_720p.mp4" type="video/mp4">
+            Seu browser não suporta vídeos em HTML5.
+          </video>
+        </div>
+        <div class="col-sm-12 col-lg-2 card box-text">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-12 texto-direita">
+                <p>A Política Nacional para a População em Situação de Rua (PNPSR), instituída pelo Decreto n. 7.053, de
+                  23 de dezembro de 2009, caracteriza como “população em situação de rua”: “o grupo populacional
+                  heterogêneo que possui em comum a pobreza extrema, os vínculos familiares interrompidos ou
+                  fragilizados e a inexistência de moradia convencional regular, e que utiliza os logradouros públicos e
+                  as áreas degradadas como espaço de moradia e de sustento, de forma temporária ou permanente, bem como
+                  as unidades de acolhimento para pernoite temporário ou como moradia provisória” (Art. 1, parágrafo
+                  único).</p>
+                <p>Contudo, como veremos adiante, a definição da situação em que se encontra essa população não define a
+                  sua subjetividade e seus predicados, que perpassam por como a sociedade o vê e como o próprio sujeito
+                  se vê (Rodrigues & Fernandes, 2020).</p>
+                <p>As pessoas em situação de rua, apesar de desenvolverem atividades informais, são, sob a ótica do
+                  trabalho, frequentemente consideradas improdutivas, inúteis, preguiçosas e vagabundas. São assim
+                  estigmatizadas, pois as contradições básicas do modo capitalista de produção escancaram as
+                  contradições e a falácia de que todos possuem iguais oportunidades e a evidência de que, embora a
+                  produção seja social, a apropriação dos ganhos é sempre individual.</p>
+                <p>Em um mecanismo de culpabilização (Mattos <span class="italico">apud</span> Guareschi, 1999 ) diante da (pseudo) igualdade e da
+                  competitividade inerente ao ideal liberal, qualquer problemática que envolva a inserção do indivíduo
+                  no sistema produtivo é alvo de um reducionismo que o descontextualiza da sociedade e transfere-lhe a
+                  culpa e responsabilidade por sua condição, por parte da sociedade no geral e até por outras pessoas em
+                  situação de rua.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="stepBack" onclick="stepNavigation('c' + stepBackNumber);">
+    <i class="fas fa-chevron-left mb-4"></i>
+    <span class="stepText">voltar</span>
+  </div>
+  <div class="stepForward" onclick="stepNavigation('c' + stepForwardNumber);">
+    <i class="fas fa-chevron-right mb-4"></i>
+    <span class="stepText">avançar</span>
+  </div>
+</div>
+<script>
+  var video = document.querySelector('#custom_video_play1');
+  video.addEventListener("playing", function () {
+    $('.stepBack').addClass('btn-play-video');
+    $('.stepForward').addClass('btn-play-video');
+  }); 
+  video.addEventListener("pause", function () {
+    $('.stepBack').removeClass('btn-play-video');
+    $('.stepForward').removeClass('btn-play-video');
+}); 
+</script>
+

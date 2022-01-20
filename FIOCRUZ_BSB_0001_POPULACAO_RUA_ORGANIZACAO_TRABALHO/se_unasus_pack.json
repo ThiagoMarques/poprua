@@ -1,0 +1,55 @@
+﻿{
+    "Package": "CI1",
+    "Institution": {
+        "AroucaID": 4511661,
+        "Acronym": "FIOCRUZ Brasília",
+        "Name": "Fundação Oswaldo Cruz - Brasília"
+    },
+    "Resource": {
+        "Name": "A Organização do Processo de Trabalho para o Trabalho Junto à População em Situação de Rua",
+        "Language": "pt-BR",
+        "CreationDate": "2021-03-07",
+        "Review": 6,
+        "ReviewDate": "2021-08-05",
+        "CoverImage": "capa.png"
+    },
+    "SupportedDevices": [
+        "Tablet",
+        "Desktop",
+		"Smartphone"
+    ],
+    "Video": {
+        "Formats": [
+            "mp4"
+        ],
+        "Resolutions": [
+		    "720p"
+        ]
+    },
+    "Persistence": {
+        "InstitutionAcronym": "FIOCRUZ_BSB",
+        "Version": "0001",
+        "Name": "POPULACAO_RUA_ORGANIZACAO_TRABALHO"
+    },
+    "Dictionary": [
+        {
+            "Variable": "STATUS",
+            "Description": "Variável padrão, indica o status do recurso.",
+            "Format": {
+                "status": "Valor nominal textual do status podendo ter os seguintes valores 'attended', 'attempted', 'completed', 'passed', 'failed'",
+                "percentage": "Valor inteiro entre 0 e 100",
+                "adjustPerc": "Variável auxiliar na contagem de páginas para cálculo de porcentagem",
+                "LTIvalue": "Valor ponto flutuante entre 0 e 1",
+                "modules": "Variável booleana que indica se um módulo foi completado",
+                "pages": "Array de valores booleanos que indicam a numeração de cada página do artefato",
+                "EX1": "Valores booleanos que indicam se uma atividade número 1 avaliativa foi completada",
+                "EX2": "Valores booleanos que indicam se uma atividade número 2 avaliativa foi completada",
+                "EX3": "Valores booleanos que indicam se uma atividade número 3 avaliativa foi completada",
+                "EX4": "Valores booleanos que indicam se uma atividade número 4 avaliativa foi completada",
+                "EX5": "Valores booleanos que indicam se uma atividade número 5 avaliativa foi completada",
+                "EX6": "Valores booleanos que indicam se uma atividade número 6 avaliativa foi completada",
+                "EX7": "Valores booleanos que indicam se uma atividade número 7 avaliativa foi completada"
+            }
+        }
+    ]
+}

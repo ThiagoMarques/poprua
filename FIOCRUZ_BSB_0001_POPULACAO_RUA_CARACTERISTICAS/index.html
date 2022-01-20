@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>População em situação de rua</title>
+  <!-- Fontawesome -->
+  <link href="vendor/fontawesome/css/all.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/normalize.css" rel="stylesheet">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap/css/custom.css" rel="stylesheet">
+  <script src="vendor/bootstrap/jquery/jquery-3.5.1.min.js"></script>
+  
+  <!-- PPU  -->
+  <script src="se_unasus_pack.js"></script>
+  <script src="vendor/lib/PPU.js"></script>
+
+</head>
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-times"></i></a>
+  <img class="image-sidemenu" src="img/logo-pop-vertical.svg" width="60%" alt="">
+
+  <!--<p class="text-center title-menu-main pt-3">Módulo 1</p>-->
+  <!--<ul class="menu-topico">
+    <li><i class="fas fa-book-open"></i>Guia do aluno</li>
+  </ul>-->
+  <ul class="menu-topico pt-4">
+    <li style="padding-left: 30px;" id="c0"><i class="fas fa-user"></i>Personagens</li>
+  </ul>
+
+  <!--<p class="text-center title-menu">Tema 1</p>-->
+  
+  <ul class="menu-topico">
+    <span id="menu-topico-1" class="collapse-span" data-toggle="collapse" href="#topico1" role="button" aria-expanded="false" aria-controls="topico1"><i
+      id="menu01" class="fas fa-angle-right"></i>Mitos e verdade sobre a PSR</span>
+    <div class="collapse" id="topico1">
+      <li class="submenu" id="c1"><i class="fas fa-check"></i>Objetivos</li>
+      <li class="submenu" id="c7">Acesso a alimentação, serviços e cidadania​</li>
+      <li class="submenu" id="c8">Condições de saúde</li>
+      <li class="submenu" id="c10">Trabalho e renda</li>
+      <li class="submenu" id="c13">Recursos utilizados para higiene</li>
+      <li class="submenu" id="c15">Posse de documentação​</li>
+      <li class="submenu" id="c16">Participação em movimentos sociais e cidadania​​</li>
+      <li class="submenu" id="c21">Exercícios</li>
+      <li class="submenu" id="c22">Referências bibliográficas</li>
+    </div>
+    <span id="menu-topico-2" class="collapse-span" data-toggle="collapse" href="#topico2" role="button" aria-expanded="false" aria-controls="topico2"><i
+      id="menu02" class="fas fa-angle-right"></i>Principais afecções e prevalências para a PSR</span>
+    <div class="collapse" id="topico2">
+      <li class="submenu" id="c23">Principais afecções e prevalências para a PSR</li>
+      <li class="submenu" id="c26">PNAB, 2017</li>
+      <li class="submenu" id="c33">Atendimentos na UBS</li>
+      <li class="submenu" id="c35">Atendimentos na rua</li>
+      <li class="submenu" id="c40">Exercícios</li>
+      <li class="submenu" id="c41">Referências bibliográficas</li>
+    </div>
+  </ul>
+  
+  <ul class="menu-topico pt-1">
+    <li style="padding-left: 30px;" id="c42"><i class="fas fa-clipboard-list"></i>Créditos</li>
+  </ul>
+
+</div>
+
+<body>
+  <nav class="navbar border-bottom">
+    <span class="side_menu_btn m-2" onclick="openNav()">☰ </span>
+    <img class="img-fluid" src="img/icone-poprua.svg" width="65px" alt="" style="display: inline-block;">
+    <div class="ml-auto">
+      <!-- <span class="btn-header"><a href="#">Retornar</a></span> -->
+    </div>
+  </nav>
+  <nav class="head-breadcrumb container" aria-label="breadcrumb">
+    <div class="row align-items-center justify-content-center row-psr">
+      <div class="col-sm-9 col-md-10 home-breadcrumb">
+        <ol class="breadcrumb">
+          <li id="breadcrumb-init" class="breadcrumb-item"><a href="index.html"><b>Início</b> / A população em situação de rua / Principais características da PSR
+          </a></li>
+          <li class="breadcrumb-item bread-active current-page" aria-current="page">Mitos e verdade sobre a PSR/ Pesquisa nacional/2008; pesquisa IPEA/2020 </li>
+        </ol>
+        <div class="row mobile-breadcrumb">
+          <p><a href="index.html">Início / </a> A população em situação de rua / Principais características da PSR <span class="current-breadcrumb"></span></p>
+          <p class="current-page">Mitos e verdade sobre a PSR/ Pesquisa nacional/2008; pesquisa IPEA/2020</p>
+        </div>
+      </div>
+      <div class="col-sm-3 col-md-2 justify-content-center col-md-2 progress-psr">
+        <div class="progressbar-psr">
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+              aria-valuemax="100"></div>
+          </div>
+          <span class="progressbar-porcentage"><span id="status_percentage">0%</span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <page>
+
+  </page>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/lib/app.js"></script>
+  <script src="vendor/lib/menu.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- <script type="text/javascript">stepNavigation('c1');</script> -->
+  <script src="vendor/jquery/jquery-ui.min.js"></script>
+  <script src='vendor/zoom/jquery.zoom.js'></script>
+</body>
+</html>
+<script>
+  $('.collapse-span').click(function() { 
+      changeIcon(this);
+  });
+  $(function() {
+  if (unasus.pack.initialize()) {
+    stepNavigation('c1');
+  }
+});
+</script>

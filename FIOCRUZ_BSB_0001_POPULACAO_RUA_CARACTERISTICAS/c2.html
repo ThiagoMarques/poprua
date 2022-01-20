@@ -1,0 +1,26 @@
+<div class="container container-psr">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="row justify-content-center">
+        <span class="page-psr pt-1 pb-1">Página <span id="page-now"></span></span>
+      </div>
+      <div class="row card">
+        <div class="row-text box-text">
+          <p>A narrativa se passa no contexto da pandemia da COVID-19, em que os trabalhadores do Posto de Saúde assistem no noticiário, no intervalo do almoço, à previsão de aumento expressivo de desempregados no país até o final de 2020.​</p>
+          <p>Ocorre, em seguida, discussão acalorada sobre a necessidade de o Governo Federal subsidiar o grande número de trabalhadores e sobre as Políticas de transferência de renda em vigor, especialmente o Bolsa Família, em que R$80,00 mensais seriam insuficientes para garantir uma segurança alimentar e habitacional mínima aos brasileiros.​</p>
+          <div class="text-center mt-5">
+            <button class="btn btnStart text-center" onclick="stepNavigation('c0')">Clique aqui e conheça os personagens</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="stepBack" onclick="stepNavigation('c' + stepBackNumber);">
+    <i class="fas fa-chevron-left mb-4"></i>
+    <span class="stepText">voltar</span>
+  </div>
+  <div class="stepForward" onclick="stepNavigation('c' + stepForwardNumber);">
+    <i class="fas fa-chevron-right mb-4"></i>
+    <span class="stepText">avançar</span>
+  </div>
+</div>

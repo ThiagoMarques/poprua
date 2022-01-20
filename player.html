@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content="no" name="msapplication-tap-highlight">
+<meta content="no-cache, no-store, must-revalidate" http-equiv="Cache-Control">
+<meta content="no-cache" http-equiv="Pragma">
+<meta content="0" http-equiv="Expires">
+<title></title>
+<link rel="stylesheet" href="player.css" media="screen" type="text/css">
+<script src="player_localstore.js"></script>
+<link href="favicon.ico" type="image/x-icon" rel="icon">
+<script>
+		var selecao = "";
+		
+		function selecao_recurso () {
+			var selectObj = document.getElementById("opcao_recurso");
+			var idx = selectObj.selectedIndex;
+			selecao = selectObj.options[idx].value;
+			iwp.src = selecao+"/index.html";			
+		}
+		
+		function cleanLocalStorage() {  
+			for (i=0; i<=localStorage.length-1; i++)  
+			{  
+				key = localStorage.key(i);  
+				if (key.indexOf(selecao) == 0) {
+					localStorage.removeItem(key);
+				}
+			}
+			iwp.src = "";
+			iwp.src = selecao+"/index.html";
+		}		
+</script>
+</head>
+<body oncontextmenu="return false" onload="selecao_recurso(this);">
+<nav role="navigation" class="navbar2">
+	<div class="ui container">
+		<div class="ui fluid container">
+			<div class="navbar2-header2">                     
+				<a class="navbar-brand2" data-target="#historico" data-toggle="modal" rel="tooltip" title="Dashboard">
+					<img src="unasusnovo.svg" alt="Logo UNA-SUS">
+				</a>			
+			</div>		
+			<div id="player_options" class="navbar2-header3">
+				<p class="navbar2-text2">
+					  <a href="javascript:cleanLocalStorage();">Limpar dados</a>
+				</p>
+            </div>
+		</div>
+		<div class="ui fluid container">
+			<select id="opcao_recurso" class="form-control" onchange="selecao_recurso(this);">>
+						<option value="FIOCRUZ_BSB_0001_POPULACAO_RUA_CARACTERISTICAS" selected>FIOCRUZ_BSB_0001_POPULACAO_RUA_CARACTERISTICAS</option>
+						<option value="FIOCRUZ_BSB_0001_POPULACAO_RUA_CUIDADO">FIOCRUZ_BSB_0001_POPULACAO_RUA_CUIDADO</option>
+						<option value="FIOCRUZ_BSB_0001_POPULACAO_RUA_ORGANIZACAO_TRABALHO">FIOCRUZ_BSB_0001_POPULACAO_RUA_ORGANIZACAO_TRABALHO</option>
+			</select>
+		</div>
+	</div>
+</nav>
+<div style="overflow:auto;-webkit-overflow-scrolling:touch" id="content">	
+    <iframe id="UNASUSPPUPlayer" allowfullscreen></iframe>
+</div>
+<script>        
+        var iwp = document.getElementById("UNASUSPPUPlayer");
+        
+		iwp.onerror = function(event) { 
+            document.getElementById("UNASUSPPUPlayer").contentWindow = "Erro ao carregar arquivo do recursos educacional...";
+        };
+        
+        iwp.onload = function(event) {
+									
+			var iwp = document.getElementById("UNASUSPPUPlayer");
+			var iwc = iwp.contentWindow;
+			var newheight = iwc.document.body.scrollHeight;
+			iwp.height = (newheight) + "px";
+                        
+            iwc.oncontextmenu = function() {
+                return false;
+            };                           
+			            
+        };
+
+        window.onunload = function () {
+        };
+				
+</script>
+</body>
+</html>
